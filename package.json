@@ -1,0 +1,30 @@
+{
+  "name": "todo-starter",
+  "version": "1.0.0",
+  "description": "Starter template for a todo app",
+  "author": "21st digital GmbH",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/21stdigital/todo-starter.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/21stdigital/todo-starter/issues"
+  },
+  "homepage": "https://github.com/21stdigital/todo-starter#readme",
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon -e js,jade ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "debug": "^2.6.9",
+    "express": "^4.17.2",
+    "http-errors": "^1.6.3",
+    "jade": "^1.11.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
