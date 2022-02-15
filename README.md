@@ -1,5 +1,7 @@
 # Todo Starter App
 
+![](screen.png)
+
 ## Getting Started
 
 1. Install dependencies
