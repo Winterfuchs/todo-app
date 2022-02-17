@@ -8,9 +8,4 @@ router.get('/', (req, res, next) => {
   res.render('index', { title: 'Todo App' })
 })
 
-// Create a post
-router.post('/todo', (req, res, next) => {
-
-})
-
 module.exports = router
