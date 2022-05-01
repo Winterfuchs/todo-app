@@ -1,6 +1,21 @@
 extends layout
 
 block content
+  div(id="mySidebar" class="sidebar")
+    a(href='javascript:void(0)' class='closebtn' onclick='closeNav()') x
+    ul
+      li
+        a(href='#') Home
+      li
+        a(href='#') About
+      li
+        a(href='#') Contact
+      li
+        a(href='#') Login
+      li
+        a(href='#') Register
+      li
+        a(href='#') Logout
   nav(class='navbar')
     .max-width 
       .logo
@@ -9,21 +24,19 @@ block content
         li
           a(class='menu-btn active' href='/') My Todos
         li
-          a(class='menu-btn' href='/') Open Sidebar
+          a(class='menu-btn' class="openbtn" onclick="toggleNav()") Open Sidebar
         li
           a(class='menu-btn' id='toggle') Change Theme
   .todo-list
     .max-width
       .content
         .content-left
-          h1 My Todos
-        
+          h1 My Todos        
         .content-right
           .card
             form(method="POST" action="/todo")
               input(class='input' name="task" type="text", placeholder="Task to be done..")
-              button(class='btn' type='submit') Add
-              
+              button(class='btn' type='submit') Add             
           .card
               ul(class='todo')
                 each n in todos

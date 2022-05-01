@@ -1,6 +1,5 @@
 // Here goes the JS code
 const toggle = document.getElementById("toggle");
-const refresh = document.getElementById("refresh");
 const theme = window.localStorage.getItem("theme");
 
 /* checks if the theme stored in localStorage is dark
@@ -15,6 +14,23 @@ toggle.addEventListener("click", () => {
    } else window.localStorage.setItem("theme", "dark");
 });
 
-refresh.addEventListener("click", () => {
-   window.location.reload();
-});
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+
+// write a function which toggles the navbar on and off when you click on the "open navbar" link
+// use the openNav() and closeNav() functions
+
+function toggleNav() {
+    if (document.getElementById("mySidebar").style.width == "250px") {
+        closeNav();
+    } else {
+        openNav();
+    }
+}
