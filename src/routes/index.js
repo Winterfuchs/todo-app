@@ -1,11 +1,6 @@
 const express = require('express')
-const bodyParser = require('body-parser')
 const router = express.Router()
-const app = express()
 const fs = require('fs');
-
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
 
 const todos = {1: "Do home work", 2: "Relax"}
 
@@ -31,8 +26,6 @@ router.post('/todo', (req, res, next) => {
   console.log(todosJSON)
   res.redirect("/")
 })
-
-app.use("/", router);
 
 module.exports = router
 
