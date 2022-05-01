@@ -1,10 +1,33 @@
 /* html background color is a dark purple from the right bottom corner and fades into a light purple color */
 
 html {
-  background: linear-gradient(to bottom right, #7e50e6, #ce61ff);
   height: 100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
+}
+
+.dark {
+    --text-white: #e6e6e6;
+    --text-dark: #fff;
+
+    --bg-indigo: #2f0933;
+    --bg-purple: #1e052b;
+    --bg-card: #242424;
+    --bg-card-border: #fff;
+    --bg-card-button: #242424;
+ }
+
+body {
+    --text-white: #ffffff;
+    --text-dark: #142136;
+
+    --bg-indigo: #7e50e6;
+    --bg-purple: #ce61ff;
+    --bg-card: #ffffff;
+    --bg-card-border: #8051ed;
+    --bg-card-button: #8f72db;
+
+    background: linear-gradient(to bottom right, var(--bg-purple), var(--bg-indigo));
 }
 
 /* h1 is white white color and font size is 50px and use font-family: poppins */
@@ -100,8 +123,9 @@ the card is white and has a border radius of 10px */
 }
 
 .card{
-    background: #fff;
+    background: var(--bg-card);
     border-radius: 10px;
+    border: 1px solid var(--bg-card-border);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     margin: 20px 100px;
     padding: 20px;
@@ -113,7 +137,7 @@ the button is white and has a border radius of 10px */
 
 
 .card .btn{
-  color: #fff;
+  color: var(--text-white);
   width: 160px!important;
   height: 45px;
   outline: none;
@@ -122,8 +146,8 @@ the button is white and has a border radius of 10px */
   border-radius: 6px;
   cursor: pointer;
   flex-wrap: nowrap;
-  background: #8051ed;
-  border: 2px solid #8051ed;
+  background: var(--bg-card-button);
+  border: 1px solid var(--bg-card-border);
   margin-left: 60px;
 }
 
@@ -143,10 +167,11 @@ the input is white and has a border radius of 10px */
 
 .card .input:focus {
     outline: none !important;
-    border:1px solid #8f72db;
+    border:1px solid var(--bg-card-border);
   }
 
 .card .todo li{
+    color: var(--text-dark);
     border-bottom: 2px solid rgb(190, 190, 190);
     list-style: none;
     padding-bottom: 10px;
