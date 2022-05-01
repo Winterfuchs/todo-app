@@ -1,10 +1,10 @@
-/* html background color is a dark purple from the right bottom corner and fades into a light purple color */
-
 html {
   height: 100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
 }
+
+/* ------------------------- Dark Theme ------------------------- */
 
 .dark {
     --text-white: #e6e6e6;
@@ -16,6 +16,8 @@ html {
     --bg-card-border: #fff;
     --bg-card-button: #242424;
  }
+
+ /* ------------------------- General ------------------------- */
 
 body {
     --text-white: #ffffff;
@@ -30,7 +32,6 @@ body {
     background: linear-gradient(to bottom right, var(--bg-purple), var(--bg-indigo));
 }
 
-/* h1 is white white color and font size is 50px and use font-family: poppins */
 h1 {
   color: white;
   font-size: 50px;
@@ -41,6 +42,8 @@ h1 {
     padding: 10px 80px;
     margin: auto;
 }
+
+/* ------------------------- Navbar ------------------------- */
 
 .navbar{
     position: fixed;
@@ -78,7 +81,7 @@ h1 {
     text-decoration: none;
 }
 
-.active {
+.navbar .active {
     border-bottom: 4px solid rgb(255, 255, 255);
 }
 
@@ -89,8 +92,19 @@ h1 {
     display: none;
 }
 
+/* ------------------------- Content ------------------------- */
+
 .content{
+    display: block;
     padding: 100px 0;
+}
+
+.content-left{
+    float: left;
+}
+
+.content-right{
+    float: right;
 }
 
 .content h1{
@@ -108,19 +122,8 @@ h1 {
   display: flex;
 }
 
-/* make a card design
-the card is white and has a border radius of 10px */
 
-.content{
-    display: block;
-}
-
-.content-left{
-    float: left;
-}
-.content-right{
-    float: right;
-}
+/* ------------------------- Card Design ------------------------- */
 
 .card{
     background: var(--bg-card);
@@ -130,10 +133,6 @@ the card is white and has a border radius of 10px */
     margin: 20px 100px;
     padding: 20px;
 }
-
-
-/* make a button design
-the button is white and has a border radius of 10px */
 
 
 .card .btn{
@@ -150,11 +149,6 @@ the button is white and has a border radius of 10px */
   border: 1px solid var(--bg-card-border);
   margin-left: 60px;
 }
-
-
-/* make a input design
-the input is white and has a border radius of 10px */
-
 
 .card .input{
     background: #fff;
@@ -180,7 +174,7 @@ the input is white and has a border radius of 10px */
     margin-left: -20px;
 }
 
-/* Sidebar */
+/* ------------------------- Sidebar ------------------------- */
 
 .sidebar {
     height: 100%;
@@ -228,8 +222,34 @@ the input is white and has a border radius of 10px */
     padding: 16px;
   }
   
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  /* ------------------------- Responsive media queries ------------------------- */
+
   @media screen and (max-height: 450px) {
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
   }
+
+    @media screen and (max-width: 1200px) {
+        .card .btn{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content-left{
+            float: none;
+        }
+
+        .content-right{
+            float: none;
+        }
+
+        .card{
+            margin: 0 0 15px 0;
+        }
+
+    }
+
+    @media screen and (max-width: 900px) {
+        .logo { display: none; } 
+    }
