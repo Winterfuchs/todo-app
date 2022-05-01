@@ -1,0 +1,149 @@
+/* html background color is a dark purple from the right bottom corner and fades into a light purple color */
+
+html {
+  background: linear-gradient(to bottom right, #7e50e6, #ce61ff);
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* h1 is white white color and font size is 50px and use font-family: poppins */
+h1 {
+  color: white;
+  font-size: 50px;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 10px 80px;
+    margin: auto;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0 50px 0 0;
+}
+
+.navbar .menu ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    margin-left: 25px;
+    text-decoration: none;
+}
+
+.active {
+    border-bottom: 4px solid rgb(255, 255, 255);
+}
+
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.content{
+    padding: 100px 0;
+}
+
+.content h1{
+    font-size: 35px;
+}
+
+.todo-list{
+    display: flex;
+    height: 20vh;
+    min-height: 500px;
+}
+
+.todo-list .max-width{
+  width: 100%;
+  display: flex;
+}
+
+/* make a card design
+the card is white and has a border radius of 10px */
+
+.content{
+    display: block;
+}
+
+.card{
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin: 20px 100px;
+    padding: 20px;
+}
+
+
+/* make a button design
+the button is white and has a border radius of 10px */
+
+
+.card .btn{
+  color: #fff;
+  width: 160px!important;
+  height: 45px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  background: #8051ed;
+  border: 2px solid #8051ed;
+  margin-left: 60px;
+}
+
+
+/* make a input design
+the input is white and has a border radius of 10px */
+
+
+.card .input{
+    background: #fff;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 15px;
+    width: 500px;
+    border:1px solid rgb(190, 190, 190);
+}
+
+.card .input:focus {
+    outline: none !important;
+    border:1px solid #8f72db;
+  }
+
+.card .todo li{
+    border-bottom: 2px solid rgb(190, 190, 190);
+    list-style: none;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    margin-left: -20px;
+}

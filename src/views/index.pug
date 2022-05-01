@@ -1,4 +1,28 @@
 extends layout
 
 block content
-  h1 My Todo App
+  nav(class='navbar')
+    .max-width 
+      .logo
+        a(href='/') My App
+      ul(class='menu')
+        li
+          a(class='menu-btn active' href='/') My Todos
+        li
+          a(class='menu-btn' href='/') Open Sidebar
+        li
+          a(class='menu-btn' href='/') Change Theme
+  .todo-list
+    .max-width
+      .content
+        h1 My Todos
+        .card
+          form(method="get" action="/foo")
+            input(class='input' type="text", placeholder="Task to be done..")
+            button(class='btn' type='button') Add
+            
+        .card
+            ul(class='todo')
+              li Todo 1
+              li Todo 2
+              li Todo 3
