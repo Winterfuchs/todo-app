@@ -15,14 +15,17 @@ block content
   .todo-list
     .max-width
       .content
-        h1 My Todos
-        .card
-          form(method="get" action="/foo")
-            input(class='input' type="text", placeholder="Task to be done..")
-            button(class='btn' type='button') Add
-            
-        .card
-            ul(class='todo')
-              li Todo 1
-              li Todo 2
-              li Todo 3
+        .content-left
+          h1 My Todos
+        
+        .content-right
+          .card
+            form(method="get" action="/foo")
+              input(class='input' type="text", placeholder="Task to be done..")
+              button(class='btn' type='button') Add
+              
+          .card
+              ul(class='todo')
+                li Todo 1
+                li Todo 2
+                li Todo 3

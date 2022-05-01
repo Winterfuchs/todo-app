@@ -92,6 +92,13 @@ the card is white and has a border radius of 10px */
     display: block;
 }
 
+.content-left{
+    float: left;
+}
+.content-right{
+    float: right;
+}
+
 .card{
     background: #fff;
     border-radius: 10px;
