@@ -14,7 +14,8 @@ html {
     --bg-purple: #1e052b;
     --bg-card: #242424;
     --bg-card-border: #fff;
-    --bg-card-button: #242424;
+    --bg-card-button-add: #242424;
+    --bg-card-button-delete: #242424;
  }
 
  /* ------------------------- General ------------------------- */
@@ -27,7 +28,8 @@ body {
     --bg-purple: #ce61ff;
     --bg-card: #ffffff;
     --bg-card-border: #8051ed;
-    --bg-card-button: #8f72db;
+    --bg-card-button-add: #8f72db;
+    --bg-card-button-delete: #fff;
 
     background: linear-gradient(to bottom right, var(--bg-purple), var(--bg-indigo));
 }
@@ -73,6 +75,7 @@ h1 {
     list-style: none;
     display: inline-block;
 }
+
 .navbar .menu li a{
     display: block;
     color: #fff;
@@ -145,10 +148,24 @@ h1 {
   border-radius: 6px;
   cursor: pointer;
   flex-wrap: nowrap;
-  background: var(--bg-card-button);
+  background: var(--bg-card-button-add);
   border: 1px solid var(--bg-card-border);
   margin-left: 60px;
 }
+
+.card .btn-delete{
+    color: rgb(161, 61, 61);
+    width: 160px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background: var(--bg-card-button-delete);
+    border: 1px solid rgb(255, 69, 69);
+    float: right;
+  }
 
 .card .input{
     background: #fff;
@@ -247,7 +264,6 @@ h1 {
         .card{
             margin: 0 0 15px 0;
         }
-
     }
 
     @media screen and (max-width: 900px) {

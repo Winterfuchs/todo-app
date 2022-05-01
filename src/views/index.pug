@@ -36,8 +36,10 @@ block content
           .card
             form(method="POST" action="/add/todo")
               input(class='input' name="task" type="text", placeholder="Task to be done..")
-              button(class='btn' type='submit') Add             
+              button(class='btn' type='submit') Add         
           .card
               ul(class='todo')
                 each n in todos
-                  li=n
+                  form(method="POST" action="/delete/todo")
+                    li=n.task
+                      button(class='content-right btn-delete' name="id" value=n.id type='submit') Remove
