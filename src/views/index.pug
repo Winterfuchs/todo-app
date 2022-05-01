@@ -20,12 +20,11 @@ block content
         
         .content-right
           .card
-            form(method="get" action="/foo")
-              input(class='input' type="text", placeholder="Task to be done..")
+            form(method="POST" action="/todo")
+              input(class='input' name="task" type="text", placeholder="Task to be done..")
               button(class='btn' type='submit') Add
               
           .card
               ul(class='todo')
-                li Todo 1
-                li Todo 2
-                li Todo 3
+                each n in todos
+                  li=n
