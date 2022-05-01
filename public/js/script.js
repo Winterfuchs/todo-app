@@ -24,9 +24,6 @@ function closeNav() {
     document.getElementById("main").style.marginLeft= "0";
 }
 
-// write a function which toggles the navbar on and off when you click on the "open navbar" link
-// use the openNav() and closeNav() functions
-
 function toggleNav() {
     if (document.getElementById("mySidebar").style.width == "250px") {
         closeNav();

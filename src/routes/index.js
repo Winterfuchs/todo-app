@@ -14,7 +14,7 @@ router.get('/', (req, res, next) => {
 })
 
 // Todos
-router.post('/todo', (req, res, next) => {
+router.post('/add/todo', (req, res, next) => {
   // Check for the current index in the json file and add one
   var index = Object.keys(todosJSON).length+1;
   // Add the new todo to the json
