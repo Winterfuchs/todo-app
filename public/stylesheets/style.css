@@ -234,11 +234,6 @@ h1 {
     position: absolute;
   }
   
-  #main {
-    transition: margin-left .5s;
-    padding: 16px;
-  }
-  
   /* ------------------------- Responsive media queries ------------------------- */
 
   @media screen and (max-height: 450px) {
